@@ -3,9 +3,9 @@ var APP_PREFIX = "js_todo_";
 var VERSION = "version_00";
 var URLS = [
   `${GHPATH}/`,
+  `${GHPATH}/favicon.ico`,
   `${GHPATH}/index.html`,
   `${GHPATH}/manifest.webmanifest`,
-  `${GHPATH}/notepad.png`,
   `${GHPATH}/sw.js`,
 ];
 

@@ -9,9 +9,9 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "https://retrying4.github.io/js-todo/notepad.png",
+      "src": "https://retrying4.github.io/js-todo/favicon.ico",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "700x700"
     }
   ]
 }

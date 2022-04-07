@@ -8,41 +8,29 @@
 	<script type="text/javascript">
 		window.todos = JSON.parse(localStorage.getItem("todos")) || [];
 
-		function add(){
-			var text = prompt("Text", "");
-			window.todos.push(text);
-			reload()
+		const add = () => {
+			window.todos.push(prompt("Text", ""));
+			reload();
 		}
 
-		function reload(){
+		const reload = () => {
 			localStorage.setItem("todos", JSON.stringify(window.todos));
-			var list = document.getElementById("list");
-			var output = "";
-
-			for(var i in window.todos){
-				var todo = window.todos[i];
-				output += `
-					<li class="list-group-item">
-						${todo}
-						<button onclick="remove(${i})" class="btn btn-danger btn-sm float-end">
-							Remove
-						</button>
-					</li>
-				`;
-			}
-			list.innerHTML = output;
+			document.getElementById("list").innerHTML = window.todos.map((todo, i) => `
+				<li class="list-group-item">
+					${todo}
+					<button onclick="remove(${i})" class="btn btn-danger btn-sm float-end">
+						Remove
+					</button>
+				</li>
+			`).join("");
 		}
 
-		function remove(i){
-			confirm("Are you sure?")
-			&&
-			window.todos.splice(i, 1);
+		const remove = (i) => {
+			confirm("Are you sure?") && window.todos.splice(i, 1);
 			reload();
 		}
 
-		window.addEventListener("load", _ => {
-			reload();
-		});
+		window.addEventListener("load", reload);
 	</script>
 </head>
 <body>

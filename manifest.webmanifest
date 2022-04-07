@@ -1,0 +1,17 @@
+{
+  "name": "Todo List",
+  "short_name": "Todo List",
+  "description": "Todo List",
+  "scope": "https://retrying4.github.io/js-todo/",
+  "start_url": "https://retrying4.github.io/js-todo/",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "https://retrying4.github.io/js-todo/notepad.png",
+      "type": "image/png",
+      "sizes": "700x700"
+    }
+  ]
+}
